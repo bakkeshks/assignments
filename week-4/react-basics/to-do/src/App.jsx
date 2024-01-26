@@ -103,9 +103,7 @@ function TodoApp() {
 
 
   </div>      
-     
-     
-      
+    
   </div>
   <div class="w-1/3 bg-gray-300 p-4"></div>
   </div>  
