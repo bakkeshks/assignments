@@ -54,33 +54,62 @@ function TodoApp() {
   };
 
   return (
-    <div>
-      <h2>TODO App</h2>
-      <label htmlFor="title">Title: </label>
-      <input
+    <>
+    <div class="flex flex-wrap">
+  <div class="w-1/3 bg-gray-100 p-4"></div>
+  <div class="w-1/3 bg-gray-200 p-4">
+
+      <h2 className='text-center text-2xl text-blue-600'>TODO App</h2>
+      <div className='flex justify-center border-8'>
+        <div>
+        <label htmlFor="title">Title: </label>
+        </div>
+
+        <div>
+        <input className='border-2 border-indigo-500/100'
         type="text"
         id="title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <br />
-      <label htmlFor="description">Description: </label>
-      <input
+        </div>
+      </div>
+      
+      
+<div className='flex justify-center'>
+    <div>
+    <label htmlFor="description">Description: </label>
+    </div>
+
+    <div>
+        
+    <input className='border-2 border-indigo-500/100'
         type="text"
         id="description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
       <br />
-      <button onClick={addTodo}>Add TODO</button>
+      <button onClick={addTodo} className='text-blue-600'>Add TODO</button>
       <div>
         {todos.map((todo, index) => (
           <div key={index}>
             <strong>{todo.title}</strong>: {todo.description}
           </div>
         ))}
-      </div>
+      </div>  
+
     </div>
+
+
+  </div>      
+     
+     
+      
+  </div>
+  <div class="w-1/3 bg-gray-300 p-4"></div>
+  </div>  
+    </>
   );
 }
 
